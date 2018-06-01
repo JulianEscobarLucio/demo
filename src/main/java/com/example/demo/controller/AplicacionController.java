@@ -1,15 +1,12 @@
 package com.example.demo.controller;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.stereotype.*;
 
-
-@Controller
-@SpringBootApplication
+@RestController
+@RequestMapping(value = "/")
 public class AplicacionController {
 
-    @RequestMapping("/")
+    @RequestMapping("/saludo")
     @ResponseBody
     String home() {
       return "Hello World!";
